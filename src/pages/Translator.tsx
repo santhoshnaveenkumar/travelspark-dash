@@ -55,24 +55,27 @@ const Translator = () => {
   };
 
   return (
-    <div className="space-y-6 animate-fade-in">
-      <div className="text-center space-y-2">
-        <h1 className="text-3xl font-bold text-foreground">Speech Translator</h1>
-        <p className="text-muted-foreground">
-          Translate speech in real-time with audio playback
+    <div className="space-y-8 animate-fade-in">
+      <div className="text-center space-y-3">
+        <h1 className="text-4xl md:text-5xl font-bold bg-gradient-translator bg-clip-text text-transparent">
+          🎤 Speech Translator
+        </h1>
+        <p className="text-lg text-muted-foreground">
+          Break language barriers with real-time translation and audio playback
         </p>
       </div>
 
-      <div className="grid md:grid-cols-2 gap-6">
-        <Card className="p-6 space-y-4">
+      <div className="grid md:grid-cols-2 gap-8">
+        <Card className="p-8 space-y-6 bg-gradient-card-overlay shadow-colorful hover:shadow-glow-blue transition-all duration-300">
           <div className="flex items-center justify-between">
-            <h3 className="font-semibold text-lg">Input</h3>
+            <h3 className="font-bold text-2xl bg-gradient-translator bg-clip-text text-transparent">Input</h3>
             <Button
               variant={isRecording ? "destructive" : "default"}
-              size="icon"
+              size="lg"
               onClick={toggleRecording}
+              className={`rounded-full w-14 h-14 shadow-lg ${isRecording ? 'animate-pulse' : 'hover:scale-110'} transition-all duration-300`}
             >
-              {isRecording ? <MicOff className="w-5 h-5" /> : <Mic className="w-5 h-5" />}
+              {isRecording ? <MicOff className="w-6 h-6" /> : <Mic className="w-6 h-6" />}
             </Button>
           </div>
           <Textarea

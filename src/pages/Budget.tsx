@@ -40,17 +40,19 @@ const Budget = () => {
   };
 
   return (
-    <div className="space-y-6 animate-fade-in">
-      <div className="text-center space-y-2">
-        <h1 className="text-3xl font-bold text-foreground">Budget Planner</h1>
-        <p className="text-muted-foreground">
-          Estimate your travel costs with smart AI calculations
+    <div className="space-y-8 animate-fade-in">
+      <div className="text-center space-y-3">
+        <h1 className="text-4xl md:text-5xl font-bold bg-gradient-budget bg-clip-text text-transparent">
+          💸 Budget Planner
+        </h1>
+        <p className="text-lg text-muted-foreground">
+          Smart AI-powered cost estimation for your perfect vacation
         </p>
       </div>
 
-      <div className="grid md:grid-cols-2 gap-6">
-        <Card className="p-6 space-y-6">
-          <h3 className="font-semibold text-lg">Trip Details</h3>
+      <div className="grid md:grid-cols-2 gap-8">
+        <Card className="p-8 space-y-6 bg-gradient-card-overlay shadow-colorful hover:shadow-glow-green transition-all duration-300">
+          <h3 className="font-bold text-2xl bg-gradient-budget bg-clip-text text-transparent">Trip Details</h3>
           
           <div className="space-y-4">
             <div className="space-y-2">
@@ -90,10 +92,10 @@ const Budget = () => {
 
             <Button
               onClick={calculateBudget}
-              className="w-full"
+              className="w-full bg-gradient-budget text-white shadow-glow-green hover:shadow-glow-blue transition-all duration-300 text-lg py-6"
               disabled={!location || !duration}
             >
-              Estimate Budget
+              Calculate My Budget 💰
             </Button>
           </div>
         </Card>
